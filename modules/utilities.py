@@ -126,6 +126,8 @@ def get_temp_frame_paths(target_path: str) -> List[str]:
 def get_temp_directory_path(target_path: str) -> str:
     target_name, _ = os.path.splitext(os.path.basename(target_path))
     target_directory_path = os.path.dirname(target_path)
+    # 由于kaggle的input为只读，所以需要将临时文件放在output目录下
+    target_directory_path = os.path.dirname(modules.globals.output_path)
     return os.path.join(target_directory_path, TEMP_DIRECTORY, target_name)
 
 
