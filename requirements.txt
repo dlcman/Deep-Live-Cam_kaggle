@@ -19,3 +19,5 @@ onnxruntime-gpu==1.16.3; sys_platform != 'darwin'
 tensorflow; sys_platform != 'darwin'
 opennsfw2==0.10.2
 protobuf==4.23.2
+git+https://github.com/TencentARC/GFPGAN.git@v1.3.8
+torch_tensorrt
